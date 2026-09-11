@@ -1,0 +1,30 @@
+{
+  "name": "Node.js & Codespaces Web Environment",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "humao.rest-client"
+      ]
+    }
+  },
+
+  // Tự động mở cổng 3000 khi app chạy
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Demo Web Application",
+      "onAutoForward": "openBrowser"
+    }
+  },
+
+  // Tự động cài thư viện ngay khi Codespace vừa tạo xong
+  "postCreateCommand": "npm install"
+}
