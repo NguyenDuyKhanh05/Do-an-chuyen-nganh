@@ -1,0 +1,36 @@
+{
+  "name": "Node.js & GitHub Codespaces Demo",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.rulers": [80, 120],
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "humao.rest-client",
+        "eamodio.gitlens",
+        "christian-kohler.npm-intellisense",
+        "PKief.material-icon-theme"
+      ]
+    }
+  },
+
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "🌐 Demo Web Application",
+      "onAutoForward": "openBrowser"
+    }
+  },
+
+  "postCreateCommand": "npm install && echo '✅ Môi trường đã sẵn sàng! Chạy: npm run dev'",
+
+  "remoteUser": "node"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "codespaces-demo-project",
+  "version": "1.0.0",
+  "description": "Ứng dụng demo phát triển phần mềm trên GitHub Codespaces - Đồ án chuyên ngành",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "keywords": [
+    "codespaces",
+    "virtual-environment",
+    "nodejs",
+    "devcontainer"
+  ],
+  "author": "Nguyễn Duy Khánh - MSSV: 23010335",
+  "license": "MIT"
+}
