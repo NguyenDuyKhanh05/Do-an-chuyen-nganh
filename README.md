@@ -1,10 +1,10 @@
-# 🚀 Phát Triển Phần Mềm Trên Môi Trường Máy Ảo Với Codespaces
+#  Phát Triển Phần Mềm Trên Môi Trường Máy Ảo Với Codespaces
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/NguyenDuyKhanh05/Do-an-chuyen-nganh?quickstart=1)
 
 ---
 
-## 📋 Thông Tin Đồ Án
+##  Thông Tin Đồ Án
 
 | Thông tin | Chi tiết |
 |---|---|
@@ -16,7 +16,7 @@
 
 ---
 
-## 🎯 Mục Tiêu Đề Tài
+##  Mục Tiêu Đề Tài
 
 1. **Tìm hiểu Codespaces** — Nghiên cứu, cấu hình và gợi ý môi trường phát triển phần mềm trên không gian code.
 2. **Xây dựng quy trình "Zero-Setup"** — Hướng dẫn sử dụng cho sinh viên ngành Công Nghệ Thông Minh có thể khởi động toàn bộ môi trường phát triển chỉ với **1 cú click chuột**, không cần cài đặt bất kỳ phần mềm nào trên máy tính cá nhân.
@@ -24,7 +24,7 @@
 
 ---
 
-## ⚡ Hướng Dẫn Sử Dụng Nhanh (Zero-Setup)
+##  Hướng Dẫn Sử Dụng Nhanh (Zero-Setup)
 
 > **Yêu cầu:** Tài khoản GitHub (miễn phí).  
 > **Không cần cài đặt:** Node.js, npm, Git, hay bất kỳ phần mềm nào trên máy tính cá nhân.
@@ -55,7 +55,7 @@ Trình duyệt tự động mở tab mới hiển thị ứng dụng demo với 
 
 ---
 
-## 🏗️ Cấu Trúc Dự Án
+##  Cấu Trúc Dự Án
 
 ```
 Do-an-chuyen-nganh/
@@ -71,7 +71,7 @@ Do-an-chuyen-nganh/
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng
+##  Công Nghệ Sử Dụng
 
 | Lớp | Công nghệ |
 |---|---|
@@ -83,7 +83,7 @@ Do-an-chuyen-nganh/
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 | Endpoint | Mô tả |
 |---|---|
@@ -125,7 +125,7 @@ Dữ liệu CRUD lưu trong bộ nhớ nên sẽ mất khi khởi động lại 
 
 ---
 
-## 🔧 Cấu Hình `.devcontainer/devcontainer.json`
+## Cấu Hình `.devcontainer/devcontainer.json`
 
 ```json
 {
@@ -154,16 +154,16 @@ Dữ liệu CRUD lưu trong bộ nhớ nên sẽ mất khi khởi động lại 
 
 ---
 
-## 📝 Kết Quả Đạt Được
+##  Kết Quả Đạt Được
 
-- ✅ Xây dựng thành công môi trường phát triển "Zero-Setup" trên GitHub Codespaces
-- ✅ Hướng dẫn cấu hình, cài đặt dễ hiểu, dễ tái sử dụng
-- ✅ Ứng dụng Node.js/Express hoạt động hoàn toàn trên môi trường máy ảo đám mây
-- ✅ Giao diện demo hiển thị thông tin thời gian thực của máy ảo Codespaces
+-  Xây dựng thành công môi trường phát triển "Zero-Setup" trên GitHub Codespaces
+-  Hướng dẫn cấu hình, cài đặt dễ hiểu, dễ tái sử dụng
+-  Ứng dụng Node.js/Express hoạt động hoàn toàn trên môi trường máy ảo đám mây
+-  Giao diện demo hiển thị thông tin thời gian thực của máy ảo Codespaces
 
 ---
 
-## 📚 Tài Liệu Tham Khảo
+##  Tài Liệu Tham Khảo
 
 - [GitHub Codespaces Documentation](https://docs.github.com/en/codespaces)
 - [Dev Containers Specification](https://containers.dev/)
