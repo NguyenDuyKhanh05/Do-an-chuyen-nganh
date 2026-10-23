@@ -67,6 +67,54 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// ─── API: CRUD công việc (lưu trong bộ nhớ, dùng để luyện REST API) ──────────
+let tasks = [{ id: 1, title: 'Mở Codespace đầu tiên', done: true }];
+let nextId = 2;
+
+const validTitle = (t) => typeof t === 'string' && t.trim().length > 0 && t.length <= 200;
+
+// Đọc danh sách
+app.get('/api/tasks', (req, res) => res.json(tasks));
+
+// Đọc một mục
+app.get('/api/tasks/:id', (req, res) => {
+  const task = tasks.find((t) => t.id === Number(req.params.id));
+  if (!task) return res.status(404).json({ error: 'Không tìm thấy' });
+  res.json(task);
+});
+
+// Tạo mới
+app.post('/api/tasks', (req, res) => {
+  const { title } = req.body || {};
+  if (!validTitle(title)) {
+    return res.status(400).json({ error: 'title phải là chuỗi 1-200 ký tự' });
+  }
+  const task = { id: nextId++, title: title.trim(), done: false };
+  tasks.push(task);
+  res.status(201).json(task);
+});
+
+// Cập nhật
+app.put('/api/tasks/:id', (req, res) => {
+  const task = tasks.find((t) => t.id === Number(req.params.id));
+  if (!task) return res.status(404).json({ error: 'Không tìm thấy' });
+  const { title, done } = req.body || {};
+  if (title !== undefined) {
+    if (!validTitle(title)) return res.status(400).json({ error: 'title không hợp lệ' });
+    task.title = title.trim();
+  }
+  if (done !== undefined) task.done = Boolean(done);
+  res.json(task);
+});
+
+// Xóa
+app.delete('/api/tasks/:id', (req, res) => {
+  const i = tasks.findIndex((t) => t.id === Number(req.params.id));
+  if (i === -1) return res.status(404).json({ error: 'Không tìm thấy' });
+  tasks.splice(i, 1);
+  res.status(204).end();
+});
+
 // ─── Start Server ────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
   const env = process.env.CODESPACE_NAME

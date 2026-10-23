@@ -1,0 +1,23 @@
+### Dùng extension "REST Client" (đã cài sẵn trong devcontainer). Bấm "Send Request".
+@host = http://localhost:3000
+
+### Kiểm tra server
+GET {{host}}/api/health
+
+### Danh sách công việc
+GET {{host}}/api/tasks
+
+### Tạo công việc
+POST {{host}}/api/tasks
+Content-Type: application/json
+
+{ "title": "Học Git trên Codespaces" }
+
+### Đánh dấu hoàn thành
+PUT {{host}}/api/tasks/2
+Content-Type: application/json
+
+{ "done": true }
+
+### Xóa
+DELETE {{host}}/api/tasks/2

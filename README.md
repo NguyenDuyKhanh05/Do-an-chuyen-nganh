@@ -1,9 +1,22 @@
-#  Phát Triển Phần Mềm Trên Môi Trường Máy Ảo Với Codespaces
+# 🚀 Phát Triển Phần Mềm Trên Môi Trường Máy Ảo Với Codespaces
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/NguyenDuyKhanh05/Do-an-chuyen-nganh?quickstart=1)
 
+---
 
-##  Mục Tiêu Đề Tài
+## 📋 Thông Tin Đồ Án
+
+| Thông tin | Chi tiết |
+|---|---|
+| **Sinh viên** | Nguyễn Duy Khánh |
+| **MSSV** | 23010335 |
+| **Giảng viên hướng dẫn** | Nguyễn Lệ Thu |
+| **Chủ đề** | Không gian Code và ứng dụng Codespaces |
+| **Tên đề tài** | Phát triển phần mềm trên môi trường máy ảo với Codespaces |
+
+---
+
+## 🎯 Mục Tiêu Đề Tài
 
 1. **Tìm hiểu Codespaces** — Nghiên cứu, cấu hình và gợi ý môi trường phát triển phần mềm trên không gian code.
 2. **Xây dựng quy trình "Zero-Setup"** — Hướng dẫn sử dụng cho sinh viên ngành Công Nghệ Thông Minh có thể khởi động toàn bộ môi trường phát triển chỉ với **1 cú click chuột**, không cần cài đặt bất kỳ phần mềm nào trên máy tính cá nhân.
@@ -11,7 +24,7 @@
 
 ---
 
-##  Hướng Dẫn Sử Dụng Nhanh (Zero-Setup)
+## ⚡ Hướng Dẫn Sử Dụng Nhanh (Zero-Setup)
 
 > **Yêu cầu:** Tài khoản GitHub (miễn phí).  
 > **Không cần cài đặt:** Node.js, npm, Git, hay bất kỳ phần mềm nào trên máy tính cá nhân.
@@ -42,8 +55,23 @@ Trình duyệt tự động mở tab mới hiển thị ứng dụng demo với 
 
 ---
 
+## 🏗️ Cấu Trúc Dự Án
 
-##  Công Nghệ Sử Dụng
+```
+Do-an-chuyen-nganh/
+├── .devcontainer/
+│   └── devcontainer.json     # Cấu hình môi trường Codespaces / Dev Container
+├── public/
+│   └── index.html            # Giao diện web demo (Vanilla HTML/CSS/JS)
+├── .gitignore
+├── package.json              # Thông tin dự án & dependencies
+├── server.js                 # Backend Express.js
+└── README.md
+```
+
+---
+
+## 🛠️ Công Nghệ Sử Dụng
 
 | Lớp | Công nghệ |
 |---|---|
@@ -55,13 +83,24 @@ Trình duyệt tự động mở tab mới hiển thị ứng dụng demo với 
 
 ---
 
-##  API Endpoints
+## 📡 API Endpoints
 
 | Endpoint | Mô tả |
 |---|---|
 | `GET /` | Trang demo chính |
 | `GET /api/system-info` | Thông tin hệ thống & môi trường Codespaces (JSON) |
 | `GET /api/health` | Kiểm tra trạng thái server |
+| `GET /api/tasks` | Danh sách công việc |
+| `GET /api/tasks/:id` | Xem một công việc |
+| `POST /api/tasks` | Tạo mới, body: `{"title": "..."}` |
+| `PUT /api/tasks/:id` | Cập nhật `title` và/hoặc `done` |
+| `DELETE /api/tasks/:id` | Xóa công việc |
+
+Dữ liệu CRUD lưu trong bộ nhớ nên sẽ mất khi khởi động lại server. Có thể thử nhanh bằng file [api.http](api.http) với extension REST Client.
+
+### Tài liệu dành cho sinh viên
+- [Quy trình sử dụng Codespaces](docs/QUY-TRINH-SINH-VIEN.md)
+- [Gợi ý devcontainer cho Python, Java, C++](docs/GOI-Y-DEVCONTAINER.md)
 
 ### Ví dụ phản hồi `/api/system-info`
 
@@ -86,7 +125,7 @@ Trình duyệt tự động mở tab mới hiển thị ứng dụng demo với 
 
 ---
 
-## Cấu Hình `.devcontainer/devcontainer.json`
+## 🔧 Cấu Hình `.devcontainer/devcontainer.json`
 
 ```json
 {
@@ -115,16 +154,16 @@ Trình duyệt tự động mở tab mới hiển thị ứng dụng demo với 
 
 ---
 
-##  Kết Quả Đạt Được
+## 📝 Kết Quả Đạt Được
 
-- Xây dựng thành công môi trường phát triển "Zero-Setup" trên GitHub Codespaces
-- Hướng dẫn cấu hình, cài đặt dễ hiểu, dễ tái sử dụng
-- Ứng dụng Node.js/Express hoạt động hoàn toàn trên môi trường máy ảo đám mây
-- Giao diện demo hiển thị thông tin thời gian thực của máy ảo Codespaces
+- ✅ Xây dựng thành công môi trường phát triển "Zero-Setup" trên GitHub Codespaces
+- ✅ Hướng dẫn cấu hình, cài đặt dễ hiểu, dễ tái sử dụng
+- ✅ Ứng dụng Node.js/Express hoạt động hoàn toàn trên môi trường máy ảo đám mây
+- ✅ Giao diện demo hiển thị thông tin thời gian thực của máy ảo Codespaces
 
 ---
 
-##  Tài Liệu Tham Khảo
+## 📚 Tài Liệu Tham Khảo
 
 - [GitHub Codespaces Documentation](https://docs.github.com/en/codespaces)
 - [Dev Containers Specification](https://containers.dev/)
